@@ -119,6 +119,8 @@ GLOBAL_DATUM_INIT(welding_sparks, /mutable_appearance, mutable_appearance('icons
 	var/icon_override = null  //Used to override hardcoded clothing dmis in human clothing proc.
 	var/sprite_sheets_obj = null //Used to override hardcoded clothing inventory object dmis in human clothing proc.
 
+	var/epsilon_icon = FALSE
+
 	//Tooltip vars
 	var/in_inventory = FALSE //is this item equipped into an inventory slot or hand of a mob?
 	var/tip_timer = 0
@@ -142,6 +144,10 @@ GLOBAL_DATUM_INIT(welding_sparks, /mutable_appearance, mutable_appearance('icons
 	LAZYINITLIST(attack_verb)
 	if(!move_resist)
 		determine_move_resist()
+
+	icon = (epsilon_icon ? 'modular_epsilon/icons/obj/items.dmi' : icon)
+	lefthand_file = (epsilon_icon ? 'modular_epsilon/icons/mob/inhands/items_lefthand.dmi' : lefthand_file)
+	righthand_file = (epsilon_icon ? 'modular_epsilon/icons/mob/inhands/items_righthand.dmi' : righthand_file)
 
 /obj/item/Initialize(mapload)
 	. = ..()
