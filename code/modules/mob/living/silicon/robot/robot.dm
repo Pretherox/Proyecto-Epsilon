@@ -306,7 +306,11 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 /mob/living/silicon/robot/proc/pick_module()
 	if(module)
 		return
-	var/list/modules = list("Engineering", "Medical", "Miner", "Janitor", "Service")
+	var/list/modules = list("Engineering", "Medical", "Miner", "Janitor", "Service", "Security")
+	for(var/mob/living/silicon/robot/segurito in GLOB.player_list)
+		if(segurito.module == "Security")
+			to_chat(usr, "Ya hay suficiente cyborgs de seguridad")
+			return
 	if(islist(force_modules) && force_modules.len)
 		modules = force_modules.Copy()
 	if(mmi != null && mmi.alien)

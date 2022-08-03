@@ -2,6 +2,9 @@
 	name = "ambulance"
 	desc = "This is what the paramedic uses to run over people they need to take to medbay."
 	icon_state = "docwagon2"
+	/*cambios epsilon*/
+	vehicle_move_delay = 0.5
+	/*terminan cambios epsilon*/
 	key_type = /obj/item/key/ambulance
 	var/obj/structure/bed/amb_trolley/bed = null
 	var/datum/action/ambulance_alarm/AA
