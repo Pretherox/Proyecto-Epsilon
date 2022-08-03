@@ -8,6 +8,7 @@
 	name = "SEVA suit"
 	desc = "A fire-proof suit for exploring hot environments."
 	epsilon_icon = TRUE
+	icon = 'modular_epsilon/icons/obj/clothing/suits.dmi'
 	icon_state = "seva"
 	item_state = "seva"
 	hoodtype = /obj/item/clothing/head/hooded/explorer/seva
@@ -45,6 +46,7 @@
 	name = "SEVA Mask"
 	desc = "A face-covering plate that can be connected to an air supply. Intended for use with the SEVA Suit."
 	epsilon_icon = TRUE
+	icon = 'modular_epsilon/icons/obj/clothing/masks.dmi'
 	icon_state = "seva"
 	item_state = "seva"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 10, ENERGY = 5, BOMB = 0, BIO = 100, RAD = 30, FIRE = 65, ACID = 25)
@@ -65,6 +67,7 @@
 	name = "Explorer Exoskeleton Mk.I"
 	desc = "A very robust military exosuit. It is composed of two separate pieces of equipment: the Radiation suit which boasts heavy military kevlar around the entire body, along with composite plates on some of the outer regions of the armour."
 	epsilon_icon = TRUE
+	icon = 'modular_epsilon/icons/obj/clothing/suits.dmi'
 	icon_state = "exo"
 	item_state = "exo"
 	w_class = WEIGHT_CLASS_BULKY
@@ -102,6 +105,7 @@
 	name = "M40 Gasmask"
 	desc = "One of various gas masks used by the ancient Miners Guild and its allies to protect from field concentrations of chemical and biological agents, along with radiological fallout particles. It is not effective in an oxygen deficient environment, so it must be connected to an air supply."
 	epsilon_icon = TRUE
+	icon = 'modular_epsilon/icons/obj/clothing/masks.dmi'
 	icon_state = "exo"
 	item_state = "exo"
 	armor = list(MELEE = 10, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 0, BIO = 50, RAD = 0, FIRE = 20, ACID = 40)

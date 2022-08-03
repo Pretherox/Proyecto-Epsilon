@@ -100,7 +100,9 @@ If I can eventually free var/lying stuff from the life() process altogether, stu
 will become less affected by lag-spikes and will be instantaneous! :3
 
 If you have any questions/constructive-comments/bugs-to-report/or have a massivly devestated butt...
-Please contact me on #coderbus IRC. ~Carn x
+Please contact me on #coderbus IRC. ~Carn
+
+Cambios de Epsilon hechos a epsilon_icon para que muestre los iconos customs de epsilon
 */
 
 /mob/living/carbon/human
