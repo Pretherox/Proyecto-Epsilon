@@ -1,3 +1,5 @@
+/*cambios hechos a clothing.dm por Vonny, son a Epsilon_icon, importante para mostrar los iconos customs del server, porteado de hispania*/
+
 /obj/item/clothing
 	name = "clothing"
 	max_integrity = 200
@@ -221,6 +223,12 @@
 	put_on_delay = 25
 	resistance_flags = NONE
 
+/obj/item/clothing/glasses/New()
+	..()
+	icon = (epsilon_icon ? 'modular_epsilon/icons/obj/clothing/glasses.dmi' : icon)
+	lefthand_file = (epsilon_icon ? 'modular_epsilon/icons/mob/inhands/clothing_lefthand.dmi' : lefthand_file)
+	righthand_file = (epsilon_icon ? 'modular_epsilon/icons/mob/inhands/clothing_righthand.dmi' : righthand_file)
+
 /*
 SEE_SELF  // can see self, no matter what
 SEE_MOBS  // can see all mobs, no matter what
@@ -274,6 +282,12 @@ BLIND     // can't see anything
 		"Vox" = 'icons/mob/clothing/species/vox/gloves.dmi',
 		"Drask" = 'icons/mob/clothing/species/drask/gloves.dmi'
 		)
+
+/obj/item/clothing/gloves/New()
+	..()
+	icon = (epsilon_icon ? 'modular_epsilon/icons/obj/clothing/gloves.dmi' : icon)
+	lefthand_file = (epsilon_icon ? 'modular_epsilon/icons/mob/inhands/clothing_lefthand.dmi' : lefthand_file)
+	righthand_file = (epsilon_icon ? 'modular_epsilon/icons/mob/inhands/clothing_righthand.dmi' : righthand_file)
 
 // Called just before an attack_hand(), in mob/UnarmedAttack()
 /obj/item/clothing/gloves/proc/Touch(atom/A, proximity)
@@ -382,6 +396,12 @@ BLIND     // can't see anything
 	var/see_in_dark = 0
 	var/lighting_alpha
 
+/obj/item/clothing/head/New()
+	..()
+	icon = (epsilon_icon ? 'modular_epsilon/icons/obj/clothing/hats.dmi' : icon)
+	lefthand_file = (epsilon_icon ? 'modular_epsilon/icons/mob/inhands/clothing_lefthand.dmi' : lefthand_file)
+	righthand_file = (epsilon_icon ? 'modular_epsilon/icons/mob/inhands/clothing_righthand.dmi' : righthand_file)
+
 /obj/item/clothing/head/update_icon_state()
 	if(..())
 		item_state = "[replacetext("[item_state]", "_up", "")][up ? "_up" : ""]"
@@ -395,6 +415,12 @@ BLIND     // can't see anything
 	var/adjusted_flags = null
 	strip_delay = 40
 	put_on_delay = 40
+
+/obj/item/clothing/mask/New()
+	..()
+	icon = (epsilon_icon ? 'modular_epsilon/icons/obj/clothing/masks.dmi' : icon)
+	lefthand_file = (epsilon_icon ? 'modular_epsilon/icons/mob/inhands/clothing_lefthand.dmi' : lefthand_file)
+	righthand_file = (epsilon_icon ? 'modular_epsilon/icons/mob/inhands/clothing_righthand.dmi' : righthand_file)
 
 //Proc that moves gas/breath masks out of the way
 /obj/item/clothing/mask/proc/adjustmask(mob/user)
@@ -482,6 +508,12 @@ BLIND     // can't see anything
 		"Drask" = 'icons/mob/clothing/species/drask/shoes.dmi'
 		)
 
+/obj/item/clothing/shoes/New()
+	..()
+	icon = (epsilon_icon ? 'modular_epsilon/icons/obj/clothing/shoes.dmi' : icon)
+	lefthand_file = (epsilon_icon ? 'modular_epsilon/icons/mob/inhands/clothing_lefthand.dmi' : lefthand_file)
+	righthand_file = (epsilon_icon ? 'modular_epsilon/icons/mob/inhands/clothing_righthand.dmi' : righthand_file)
+
 /obj/item/clothing/shoes/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/match) && src.loc == user)
 		var/obj/item/match/M = I
@@ -545,6 +577,12 @@ BLIND     // can't see anything
 	var/ignore_suitadjust = TRUE
 	var/adjust_flavour = null
 	var/list/hide_tail_by_species = null
+
+/obj/item/clothing/suit/New()
+	..()
+	icon = (epsilon_icon ? 'modular_epsilon/icons/obj/clothing/suits.dmi' : icon)
+	lefthand_file = (epsilon_icon ? 'modular_epsilon/icons/mob/inhands/clothing_lefthand.dmi' : lefthand_file)
+	righthand_file = (epsilon_icon ? 'modular_epsilon/icons/mob/inhands/clothing_righthand.dmi' : righthand_file)
 
 //Proc that opens and closes jackets.
 /obj/item/clothing/suit/proc/adjustsuit(mob/user)
@@ -701,6 +739,12 @@ BLIND     // can't see anything
 	var/displays_id = TRUE
 	var/rolled_down = FALSE
 	var/basecolor
+
+/obj/item/clothing/under/New()
+	..()
+	icon = (epsilon_icon ? 'modular_epsilon/icons/obj/clothing/uniforms.dmi' : icon)
+	lefthand_file = (epsilon_icon ? 'modular_epsilon/icons/mob/inhands/clothing_lefthand.dmi' : lefthand_file)
+	righthand_file = (epsilon_icon ? 'modular_epsilon/icons/mob/inhands/clothing_righthand.dmi' : righthand_file)
 
 /obj/item/clothing/under/rank/Initialize(mapload)
 	. = ..()

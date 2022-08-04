@@ -2600,4 +2600,5 @@
 #include "goon\code\datums\browserOutput.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
+#include "modular_epsilon\code\modules\mining\equipment\explorer_gear.dm"
 // END_INCLUDE
