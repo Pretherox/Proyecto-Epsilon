@@ -2600,5 +2600,11 @@
 #include "goon\code\datums\browserOutput.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
+#include "modular_epsilon\code\_DEFINES\wires.dm"
+#include "modular_epsilon\code\datums\wires\clothelate.dm"
+#include "modular_epsilon\code\game\machinery\clothelate.dm"
+#include "modular_epsilon\code\game\machinery\constructable_frame.dm"
 #include "modular_epsilon\code\modules\mining\equipment\explorer_gear.dm"
+#include "modular_epsilon\code\modules\research\designs\clothelate_designs.dm"
+#include "modular_epsilon\code\modules\research\designs\machine_designs.dm"
 // END_INCLUDE
