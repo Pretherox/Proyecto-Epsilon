@@ -302,7 +302,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 	scanner = null
 	module_actions.Cut()
 	return ..()
-
+/* Cambios epsilon, se agrega borg de security */
 /mob/living/silicon/robot/proc/pick_module()
 	if(module)
 		return
