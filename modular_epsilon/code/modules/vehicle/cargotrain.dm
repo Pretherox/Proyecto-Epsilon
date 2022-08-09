@@ -140,7 +140,7 @@
 	var/olddir = null
 	if(trolley)
 		olddir = trolley.dir
-	icon_state = "CocheCargo2"
+	icon_state = "CocheCargo3"
 	sleep(2)
 	icon_state = "CocheCargo1"
 	if(trolley && !Adjacent(trolley))
