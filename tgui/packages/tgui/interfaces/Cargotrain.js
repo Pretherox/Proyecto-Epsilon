@@ -24,7 +24,7 @@ export const Cargotrain = (props, context) => {
     <Window>
       <Window.Content>
         <Section
-          title="Cargotrain"
+          title="Cargo Truck"
           buttons={
 			<>
             <Button
