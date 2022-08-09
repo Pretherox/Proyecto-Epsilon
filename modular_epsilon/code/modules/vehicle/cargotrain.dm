@@ -1,8 +1,8 @@
 /*Cargotruck, creado por Vonny. Desprecio este frankenstein de codigo*/
 
 /obj/vehicle/cargotrain
-	name = "Cargo train"
-	desc = "It's a cargo train... What?"
+	name = "Cargo truck"
+	desc = "It's a cargo truck..."
 	icon = 'modular_epsilon/icons/obj/vehicles/vehicles.dmi'
 	icon_state = "CocheCargo1"
 	anchored = FALSE
@@ -24,8 +24,8 @@
 		. += "<span class='notice'>[occupant] seems to be driving it.</span>"
 
 /obj/item/key/cargo
-	name = "Cargo train key"
-	desc = "It's a Cargotrain key!"
+	name = "Cargo truck key"
+	desc = "It's a cargo truck key!"
 	icon = 'modular_epsilon/icons/obj/vehicles/vehicles.dmi'
 	icon_state = "keycargo"
 
@@ -81,9 +81,9 @@
 	if(key_type && !is_key(inserted_key))
 		return
 	if(L == user)
-		visible_message("[user] starts climbing into the cargotrain.")
+		visible_message("[user] starts climbing into the cargo truck.")
 	else
-		visible_message("[user] starts putting [L.name] into the cargotrain.")
+		visible_message("[user] starts putting [L.name] into the cargo truck.")
 	if(do_after(user, 20, target = L))
 		if(!permitted_check(O, user))
 			return
@@ -103,17 +103,17 @@
 	if(usr.stat != 0 || !(ishuman(usr)))
 		return
 	if(occupant)
-		to_chat(usr, "<span class='boldnotice'>The cargo train is already occupied!</span>")
+		to_chat(usr, "<span class='boldnotice'>The cargo truck is already occupied!</span>")
 		return
 	if(usr.incapacitated() || usr.buckled) //are you cuffed, dying, lying, stunned or other
 		return
 	if(usr.has_buckled_mobs()) //mob attached to us
 		to_chat(usr, "<span class='warning'>[usr] will not fit into [src] because [usr.p_they()] [usr.p_have()] a slime latched onto [usr.p_their()] head.</span>")
 		return
-	visible_message("[usr] starts climbing into the cargo train.")
+	visible_message("[usr] starts climbing into the cargo truck.")
 	if(do_after(usr, 20, target = usr))
 		if(occupant)
-			to_chat(usr, "<span class='boldnotice'>The cargo train is already occupied!</span>")
+			to_chat(usr, "<span class='boldnotice'>The cargo truck is already occupied!</span>")
 			return
 		usr.stop_pulling()
 		usr.forceMove(src)
@@ -234,7 +234,7 @@
 
 /obj/structure/cargo_trolley/examine(mob/user)
 	. = ..()
-	. += "<span class='notice'>Drag [src]'s sprite over the cargotrain to (de)attach it.</span>"
+	. += "<span class='notice'>Drag [src]'s sprite over the cargo truck to (de)attach it.</span>"
 
 /obj/structure/cargo_trolley/crowbar_act(mob/living/user, obj/item/I)
 	if(cargohold > 0)
@@ -249,7 +249,7 @@
 		crg = over_object
 		if(!crg.trolley)
 			crg.trolley = src
-			to_chat(usr, "You attach the trolley to the cargotrain.")
+			to_chat(usr, "You attach the trolley to the cargo truck.")
 			crg.cargotrolleyhooked = TRUE
 			hooked = TRUE
 			anchored = TRUE
