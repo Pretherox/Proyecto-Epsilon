@@ -12,7 +12,7 @@
 	integrity_failure = 50
 	generic_pixel_x = 0
 	generic_pixel_y = 4
-	vehicle_move_delay = 0.7
+	vehicle_move_delay = 0.5
 	var/mob/living/carbon/human/occupant = null
 	var/obj/structure/cargo_trolley/trolley = null
 	var/loaddir = 0
@@ -137,12 +137,20 @@
 
 /obj/vehicle/cargotrain/Move(newloc, Dir)
 	var/oldloc = loc
+	var/olddir = null
+	if(trolley)
+		olddir = trolley.dir
+	icon_state = "CocheCargo3"
+	sleep(2)
+	icon_state = "CocheCargo1"
 	if(trolley && !Adjacent(trolley))
 		trolley = null
 	. = ..()
 	if(trolley && get_dist(oldloc, loc) <= 2)
 		trolley.Move(oldloc, get_dir(trolley, oldloc), (last_move_diagonal? 2 : 1) * (vehicle_move_delay + GLOB.configuration.movement.human_delay))
 		trolley.dir = Dir
+	if(trolley && oldloc == loc)
+		trolley.dir = olddir
 
 /obj/vehicle/cargotrain/relaymove(mob/user, direction)
 	if(Adjacent(trolley) && cargotrolleyhooked == TRUE)
@@ -169,7 +177,7 @@
 /obj/vehicle/cargotrain/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = TRUE, datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
 	if(!ui)
-		ui = new(user, src, ui_key, "Cargotrain", name, 400, 150, master_ui, state)
+		ui = new(user, src, ui_key, "Cargotrain", name, 400, 210, master_ui, state)
 		ui.open()
 
 /obj/vehicle/cargotrain/ui_act(action, params)
