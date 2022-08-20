@@ -28463,6 +28463,7 @@
 	dir = 8;
 	pixel_x = 24
 	},
+/obj/machinery/computer/library,
 /turf/simulated/floor/wood,
 /area/library)
 "brC" = (
@@ -81416,6 +81417,14 @@
 /obj/effect/spawner/random_spawners/blood_often,
 /turf/simulated/floor/plating,
 /area/maintenance/apmaint)
+"pNG" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/carpet,
+/area/chapel/main)
 "pOg" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/floor/plasteel{
@@ -131619,8 +131628,8 @@ bmI
 bmT
 buz
 brI
+pNG
 buY
-boJ
 bjD
 aYP
 bFw
